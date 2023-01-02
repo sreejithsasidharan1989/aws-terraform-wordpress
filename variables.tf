@@ -24,7 +24,7 @@ variable "instance-type" {
 locals {
   common_tags = {
     environment = "Production"
-    project     = "Zomato"
+    project     = "WordPress"
   }
   subnet_count = length(data.aws_availability_zones.az.names)
   ami-id = data.aws_ami.ami.image_id
