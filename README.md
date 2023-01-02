@@ -13,7 +13,7 @@ This project simplifies WordPress application installation on Amazon Ec2 instanc
 5. **AWS Route Table** - For this project, we need route tables for private and public subnets each.
 6. **AWS Elastic IP** - An elastic IP address should be assigned to Nat Gateway.
 7. **Security Groups** - All three instances comes with indipendant security group and related group rules as follows:
-       1. `Bastion-server Security Group` : This security group allows inbound SSH traffic from public internet.
+       1. `Bastion-server Security Group` : This security group allows inbound SSH traffic from public internet.   
        2. `Frontend-server Security Group` : The frontend-server security groups allows SSH traffic originates from Bastion server and HTTP/S traffic from internet.       
        3. `Backend-server Security Group` - This security groups allows inbound SSH connection originates Bastion server security group and MySQL connection originates from Frontend-server security group.
 8. **AWS Keypair** - All SSH access are keybased. A key-pair is generated locally and the public key is uploaded into the AWS using terraform.
